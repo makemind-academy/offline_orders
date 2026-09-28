@@ -1,0 +1,68 @@
+{
+  "type": "application",
+  "title": "Truck Orders",
+  "version": "1.0.0",
+  "initialRoute": "/pad",
+  "routes": {
+    "/pad": "ui://pages/pad"
+  },
+  "theme": {
+    "mode": "light",
+    "color": {
+      "primary": "#0f766e",
+      "onPrimary": "#ffffff",
+      "primaryContainer": "#d7f0ec",
+      "onPrimaryContainer": "#04302c",
+      "surface": "#ffffff",
+      "onSurface": "#12211f",
+      "surfaceContainerHighest": "#f2f6f5",
+      "onSurfaceVariant": "#7f8f8c",
+      "outline": "#e0e9e7",
+      "outlineVariant": "#e0e9e7",
+      "error": "#b3261e",
+      "onError": "#ffffff",
+      "warning": "#a4620a",
+      "onWarning": "#ffffff",
+      "inverseSurface": "#12211f",
+      "inverseOnSurface": "#ffffff"
+    },
+    "spacing": {
+      "xxs": 2,
+      "xs": 4,
+      "sm": 8,
+      "md": 16,
+      "lg": 24,
+      "xl": 32,
+      "2xl": 48
+    },
+    "shape": {
+      "none": 0,
+      "extraSmall": 4,
+      "small": 8,
+      "medium": 12,
+      "large": 16,
+      "extraLarge": 28,
+      "full": 999
+    },
+    "fonts": {
+      "JetBrainsMono": {
+        "source": "asset",
+        "family": "JetBrainsMono"
+      }
+    }
+  },
+  "state": {
+    "initial": {
+      "link": "",
+      "linkColor": "#059669",
+      "pending": 0,
+      "pendingLine": "",
+      "takenCount": 0,
+      "takenLine": "",
+      "takenRows": [],
+      "total": "",
+      "queueRule": "",
+      "notice": ""
+    }
+  }
+}

@@ -1,0 +1,13 @@
+name: pad_server
+description: The order pad's own server — takes orders without waiting on the till, spools them, and forwards them when the till is back.
+version: 1.0.0
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  mcp_server: ^2.1.1
+
+dev_dependencies:
+  lints: ^3.0.0
