@@ -18,171 +18,267 @@
     }
   },
   "content": {
-    "type": "container",
-    "decoration": {
-      "color": "{{theme.color.surfaceContainerHighest}}"
+    "type": "mediaQuery",
+    "condition": {
+      "minWidth": 600
     },
-    "child": {
-      "type": "linear",
-      "direction": "vertical",
-      "children": [
-        {
-          "type": "container",
-          "padding": {
-            "left": 22,
-            "right": 22,
-            "top": 20,
-            "bottom": 16
-          },
-          "decoration": {
-            "color": "{{theme.color.surface}}",
-            "border": {
-              "bottom": true,
-              "color": "{{theme.color.outline}}",
-              "width": 1
-            }
-          },
-          "child": {
-            "type": "linear",
-            "direction": "horizontal",
-            "crossAxisAlignment": "center",
-            "children": [
-              {
-                "type": "linear",
-                "direction": "vertical",
-                "children": [
-                  {
-                    "type": "text",
-                    "content": "MORNING RUN · TRUCK 2",
-                    "style": {
-                      "fontSize": 12,
-                      "color": "{{theme.color.onSurfaceVariant}}",
-                      "letterSpacing": 2.0
-                    }
-                  },
-                  {
-                    "type": "text",
-                    "content": "Order pad",
-                    "style": {
-                      "fontSize": 21,
-                      "color": "{{theme.color.onSurface}}",
-                      "fontWeight": "bold"
-                    }
-                  }
-                ],
-                "gap": 4
-              },
-              {
-                "type": "spacer"
-              },
-              {
-                "type": "container",
-                "padding": {
-                  "left": 12,
-                  "right": 12,
-                  "top": 6,
-                  "bottom": 6
-                },
-                "decoration": {
-                  "color": "{{linkColor}}",
-                  "borderRadius": 999
-                },
-                "child": {
-                  "type": "text",
-                  "content": "{{link}}",
-                  "style": {
-                    "fontSize": 12,
-                    "color": "{{theme.color.onPrimary}}",
-                    "fontFamily": "JetBrainsMono",
-                    "letterSpacing": 1.4
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "container",
-          "padding": {
-            "left": 24,
-            "right": 24,
-            "top": 10,
-            "bottom": 4
-          },
-          "child": {
-            "type": "linear",
-            "direction": "horizontal",
-            "crossAxisAlignment": "center",
-            "children": [
-              {
-                "type": "button",
-                "label": "Take coffee",
-                "variant": "filled",
-                "onTap": {
-                  "type": "tool",
-                  "tool": "pad.take",
-                  "params": {
-                    "item": "coffee"
-                  }
-                }
-              },
-              {
-                "type": "box",
-                "width": 10
-              },
-              {
-                "type": "button",
-                "label": "Take sandwich",
-                "variant": "filled",
-                "onTap": {
-                  "type": "tool",
-                  "tool": "pad.take",
-                  "params": {
-                    "item": "sandwich"
-                  }
-                }
-              },
-              {
-                "type": "box",
-                "width": 10
-              },
-              {
-                "type": "button",
-                "label": "Take juice",
-                "variant": "filled",
-                "onTap": {
-                  "type": "tool",
-                  "tool": "pad.take",
-                  "params": {
-                    "item": "juice"
-                  }
-                }
-              },
-              {
-                "type": "box",
-                "width": 10
-              },
-              {
-                "type": "button",
-                "label": "Retry link",
-                "variant": "outlined",
-                "onTap": {
-                  "type": "tool",
-                  "tool": "pad.flush",
-                  "params": {}
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "expanded",
-          "child": {
+    "then": {
+      "type": "container",
+      "decoration": {
+        "color": "{{theme.color.surfaceContainerHighest}}"
+      },
+      "child": {
+        "type": "linear",
+        "direction": "vertical",
+        "children": [
+          {
             "type": "container",
             "padding": {
               "left": 22,
               "right": 22,
-              "top": 16,
+              "top": 20,
+              "bottom": 16
+            },
+            "decoration": {
+              "color": "{{theme.color.surface}}",
+              "border": {
+                "bottom": true,
+                "color": "{{theme.color.outline}}",
+                "width": 1
+              }
+            },
+            "child": {
+              "type": "linear",
+              "direction": "horizontal",
+              "crossAxisAlignment": "center",
+              "children": [
+                {
+                  "type": "linear",
+                  "direction": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "content": "MORNING RUN · TRUCK 2",
+                      "style": {
+                        "fontSize": 12,
+                        "color": "{{theme.color.onSurfaceVariant}}",
+                        "letterSpacing": 2.0
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "content": "Order pad",
+                      "style": {
+                        "fontSize": 21,
+                        "color": "{{theme.color.onSurface}}",
+                        "fontWeight": "bold"
+                      }
+                    }
+                  ],
+                  "gap": 4
+                },
+                {
+                  "type": "spacer"
+                },
+                {
+                  "type": "container",
+                  "padding": {
+                    "left": 12,
+                    "right": 12,
+                    "top": 6,
+                    "bottom": 6
+                  },
+                  "decoration": {
+                    "color": "{{linkColor}}",
+                    "borderRadius": 999
+                  },
+                  "child": {
+                    "type": "text",
+                    "content": "{{link}}",
+                    "style": {
+                      "fontSize": 12,
+                      "color": "{{theme.color.onPrimary}}",
+                      "fontFamily": "JetBrainsMono",
+                      "letterSpacing": 1.4
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "container",
+            "padding": {
+              "left": 24,
+              "right": 24,
+              "top": 10,
+              "bottom": 4
+            },
+            "child": {
+              "type": "linear",
+              "direction": "horizontal",
+              "crossAxisAlignment": "center",
+              "children": [
+                {
+                  "type": "button",
+                  "label": "Take coffee",
+                  "variant": "filled",
+                  "onTap": {
+                    "type": "tool",
+                    "tool": "pad.take",
+                    "params": {
+                      "item": "coffee"
+                    }
+                  }
+                },
+                {
+                  "type": "box",
+                  "width": 10
+                },
+                {
+                  "type": "button",
+                  "label": "Take sandwich",
+                  "variant": "filled",
+                  "onTap": {
+                    "type": "tool",
+                    "tool": "pad.take",
+                    "params": {
+                      "item": "sandwich"
+                    }
+                  }
+                },
+                {
+                  "type": "box",
+                  "width": 10
+                },
+                {
+                  "type": "button",
+                  "label": "Take juice",
+                  "variant": "filled",
+                  "onTap": {
+                    "type": "tool",
+                    "tool": "pad.take",
+                    "params": {
+                      "item": "juice"
+                    }
+                  }
+                },
+                {
+                  "type": "box",
+                  "width": 10
+                },
+                {
+                  "type": "button",
+                  "label": "Retry link",
+                  "variant": "outlined",
+                  "onTap": {
+                    "type": "tool",
+                    "tool": "pad.flush",
+                    "params": {}
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "expanded",
+            "child": {
+              "type": "container",
+              "padding": {
+                "left": 22,
+                "right": 22,
+                "top": 16,
+                "bottom": 8
+              },
+              "child": {
+                "type": "container",
+                "padding": {
+                  "all": 18
+                },
+                "decoration": {
+                  "color": "{{theme.color.surface}}",
+                  "borderRadius": 14,
+                  "border": {
+                    "color": "{{theme.color.outline}}",
+                    "width": 1
+                  }
+                },
+                "child": {
+                  "type": "list",
+                  "items": "{{takenRows}}",
+                  "shrinkWrap": true,
+                  "itemSpacing": 10,
+                  "emptyMessage": "Nothing taken yet — the pad is ready",
+                  "itemTemplate": {
+                    "type": "linear",
+                    "direction": "horizontal",
+                    "crossAxisAlignment": "center",
+                    "children": [
+                      {
+                        "type": "container",
+                        "width": 90,
+                        "alignment": "centerStart",
+                        "child": {
+                          "type": "text",
+                          "content": "{{item.id}}",
+                          "textAlign": "start",
+                          "maxLines": 1,
+                          "style": {
+                            "fontSize": 14,
+                            "color": "{{theme.color.onSurfaceVariant}}",
+                            "textAlign": "start",
+                            "fontFamily": "JetBrainsMono"
+                          }
+                        }
+                      },
+                      {
+                        "type": "box",
+                        "width": 0
+                      },
+                      {
+                        "type": "expanded",
+                        "child": {
+                          "type": "text",
+                          "content": "{{item.item}}",
+                          "style": {
+                            "fontSize": 17,
+                            "color": "{{theme.color.onSurface}}"
+                          }
+                        }
+                      },
+                      {
+                        "type": "box",
+                        "width": 0
+                      },
+                      {
+                        "type": "container",
+                        "width": 80,
+                        "alignment": "centerEnd",
+                        "child": {
+                          "type": "text",
+                          "content": "{{item.priceLabel}}",
+                          "textAlign": "end",
+                          "maxLines": 1,
+                          "style": {
+                            "fontSize": 15,
+                            "color": "{{theme.color.onSurface}}",
+                            "textAlign": "end",
+                            "fontFamily": "JetBrainsMono"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "container",
+            "padding": {
+              "left": 22,
+              "right": 22,
+              "top": 6,
               "bottom": 8
             },
             "child": {
@@ -199,244 +295,599 @@
                 }
               },
               "child": {
-                "type": "list",
-                "items": "{{takenRows}}",
-                "shrinkWrap": true,
-                "itemSpacing": 10,
-                "emptyMessage": "Nothing taken yet — the pad is ready",
-                "itemTemplate": {
-                  "type": "linear",
-                  "direction": "horizontal",
-                  "crossAxisAlignment": "center",
-                  "children": [
-                    {
-                      "type": "container",
-                      "width": 90,
-                      "alignment": "centerStart",
-                      "child": {
+                "type": "linear",
+                "direction": "vertical",
+                "children": [
+                  {
+                    "type": "linear",
+                    "direction": "horizontal",
+                    "crossAxisAlignment": "center",
+                    "children": [
+                      {
                         "type": "text",
-                        "content": "{{item.id}}",
-                        "textAlign": "start",
-                        "maxLines": 1,
+                        "content": "WAITING TO REACH THE TILL",
                         "style": {
-                          "fontSize": 14,
+                          "fontSize": 11,
                           "color": "{{theme.color.onSurfaceVariant}}",
-                          "textAlign": "start",
+                          "letterSpacing": 1.6
+                        }
+                      },
+                      {
+                        "type": "spacer"
+                      },
+                      {
+                        "type": "text",
+                        "content": "{{pending}}",
+                        "style": {
+                          "fontSize": 18,
+                          "color": "{{theme.color.primary}}",
                           "fontFamily": "JetBrainsMono"
                         }
                       }
-                    },
-                    {
-                      "type": "box",
-                      "width": 0
-                    },
-                    {
-                      "type": "expanded",
-                      "child": {
+                    ]
+                  },
+                  {
+                    "type": "linear",
+                    "direction": "horizontal",
+                    "crossAxisAlignment": "center",
+                    "children": [
+                      {
                         "type": "text",
-                        "content": "{{item.item}}",
+                        "content": "{{pendingLine}}",
                         "style": {
-                          "fontSize": 17,
-                          "color": "{{theme.color.onSurface}}"
+                          "fontSize": 13,
+                          "color": "{{theme.color.onSurfaceVariant}}",
+                          "fontFamily": "JetBrainsMono"
                         }
                       }
-                    },
-                    {
-                      "type": "box",
-                      "width": 0
-                    },
-                    {
-                      "type": "container",
-                      "width": 80,
-                      "alignment": "centerEnd",
-                      "child": {
+                    ]
+                  },
+                  {
+                    "type": "divider",
+                    "color": "{{theme.color.outline}}"
+                  },
+                  {
+                    "type": "linear",
+                    "direction": "horizontal",
+                    "crossAxisAlignment": "center",
+                    "children": [
+                      {
                         "type": "text",
-                        "content": "{{item.priceLabel}}",
-                        "textAlign": "end",
-                        "maxLines": 1,
+                        "content": "Taken on this pad",
+                        "style": {
+                          "fontSize": 13,
+                          "color": "{{theme.color.onSurfaceVariant}}"
+                        }
+                      },
+                      {
+                        "type": "spacer"
+                      },
+                      {
+                        "type": "text",
+                        "content": "{{takenCount}}",
                         "style": {
                           "fontSize": 15,
                           "color": "{{theme.color.onSurface}}",
-                          "textAlign": "end",
                           "fontFamily": "JetBrainsMono"
                         }
                       }
-                    }
-                  ]
-                }
+                    ]
+                  },
+                  {
+                    "type": "linear",
+                    "direction": "horizontal",
+                    "crossAxisAlignment": "center",
+                    "children": [
+                      {
+                        "type": "text",
+                        "content": "Rung up",
+                        "style": {
+                          "fontSize": 13,
+                          "color": "{{theme.color.onSurfaceVariant}}"
+                        }
+                      },
+                      {
+                        "type": "spacer"
+                      },
+                      {
+                        "type": "text",
+                        "content": "{{total}}",
+                        "style": {
+                          "fontSize": 20,
+                          "color": "{{theme.color.onSurface}}",
+                          "fontFamily": "JetBrainsMono"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "gap": 10
               }
             }
-          }
-        },
-        {
-          "type": "container",
-          "padding": {
-            "left": 22,
-            "right": 22,
-            "top": 6,
-            "bottom": 8
           },
-          "child": {
+          {
             "type": "container",
             "padding": {
-              "all": 18
+              "left": 22,
+              "right": 22,
+              "top": 4,
+              "bottom": 18
+            },
+            "child": {
+              "type": "linear",
+              "direction": "horizontal",
+              "crossAxisAlignment": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "content": "{{queueRule}}",
+                  "style": {
+                    "fontSize": 13,
+                    "color": "{{theme.color.onSurfaceVariant}}"
+                  }
+                },
+                {
+                  "type": "spacer"
+                },
+                {
+                  "type": "text",
+                  "content": "{{notice}}",
+                  "style": {
+                    "fontSize": 13,
+                    "color": "{{theme.color.primary}}"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "crossAxisAlignment": "stretch"
+      }
+    },
+    "else": {
+      "type": "container",
+      "decoration": {
+        "color": "{{theme.color.surfaceContainerHighest}}"
+      },
+      "child": {
+        "type": "linear",
+        "direction": "vertical",
+        "crossAxisAlignment": "stretch",
+        "children": [
+          {
+            "type": "container",
+            "padding": {
+              "left": 22,
+              "right": 22,
+              "top": 20,
+              "bottom": 16
             },
             "decoration": {
               "color": "{{theme.color.surface}}",
-              "borderRadius": 14,
               "border": {
+                "bottom": true,
                 "color": "{{theme.color.outline}}",
                 "width": 1
               }
             },
             "child": {
               "type": "linear",
-              "direction": "vertical",
+              "direction": "horizontal",
+              "crossAxisAlignment": "center",
+              "children": [
+                {
+                  "type": "expanded",
+                  "child": {
+                    "type": "linear",
+                    "direction": "vertical",
+                    "children": [
+                      {
+                        "type": "text",
+                        "content": "MORNING RUN · TRUCK 2",
+                        "style": {
+                          "fontSize": 12,
+                          "color": "{{theme.color.onSurfaceVariant}}",
+                          "letterSpacing": 2.0
+                        }
+                      },
+                      {
+                        "type": "text",
+                        "content": "Order pad",
+                        "style": {
+                          "fontSize": 21,
+                          "color": "{{theme.color.onSurface}}",
+                          "fontWeight": "bold"
+                        }
+                      }
+                    ],
+                    "gap": 4
+                  }
+                },
+                {
+                  "type": "box",
+                  "width": 8
+                },
+                {
+                  "type": "container",
+                  "padding": {
+                    "left": 12,
+                    "right": 12,
+                    "top": 6,
+                    "bottom": 6
+                  },
+                  "decoration": {
+                    "color": "{{linkColor}}",
+                    "borderRadius": 999
+                  },
+                  "child": {
+                    "type": "text",
+                    "content": "{{link}}",
+                    "style": {
+                      "fontSize": 12,
+                      "color": "{{theme.color.onPrimary}}",
+                      "fontFamily": "JetBrainsMono",
+                      "letterSpacing": 1.4
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "expanded",
+            "child": {
+              "type": "scrollView",
               "children": [
                 {
                   "type": "linear",
-                  "direction": "horizontal",
-                  "crossAxisAlignment": "center",
+                  "direction": "vertical",
+                  "crossAxisAlignment": "stretch",
                   "children": [
                     {
-                      "type": "text",
-                      "content": "WAITING TO REACH THE TILL",
-                      "style": {
-                        "fontSize": 11,
-                        "color": "{{theme.color.onSurfaceVariant}}",
-                        "letterSpacing": 1.6
+                      "type": "container",
+                      "padding": {
+                        "left": 24,
+                        "right": 24,
+                        "top": 10,
+                        "bottom": 4
+                      },
+                      "child": {
+                        "type": "wrap",
+                        "spacing": 8,
+                        "runSpacing": 8,
+                        "children": [
+                          {
+                            "type": "button",
+                            "label": "Take coffee",
+                            "variant": "filled",
+                            "onTap": {
+                              "type": "tool",
+                              "tool": "pad.take",
+                              "params": {
+                                "item": "coffee"
+                              }
+                            }
+                          },
+                          {
+                            "type": "button",
+                            "label": "Take sandwich",
+                            "variant": "filled",
+                            "onTap": {
+                              "type": "tool",
+                              "tool": "pad.take",
+                              "params": {
+                                "item": "sandwich"
+                              }
+                            }
+                          },
+                          {
+                            "type": "button",
+                            "label": "Take juice",
+                            "variant": "filled",
+                            "onTap": {
+                              "type": "tool",
+                              "tool": "pad.take",
+                              "params": {
+                                "item": "juice"
+                              }
+                            }
+                          },
+                          {
+                            "type": "button",
+                            "label": "Retry link",
+                            "variant": "outlined",
+                            "onTap": {
+                              "type": "tool",
+                              "tool": "pad.flush",
+                              "params": {}
+                            }
+                          }
+                        ]
                       }
                     },
                     {
-                      "type": "spacer"
+                      "type": "container",
+                      "padding": {
+                        "left": 22,
+                        "right": 22,
+                        "top": 16,
+                        "bottom": 8
+                      },
+                      "child": {
+                        "type": "container",
+                        "padding": {
+                          "all": 18
+                        },
+                        "decoration": {
+                          "color": "{{theme.color.surface}}",
+                          "borderRadius": 14,
+                          "border": {
+                            "color": "{{theme.color.outline}}",
+                            "width": 1
+                          }
+                        },
+                        "child": {
+                          "type": "list",
+                          "items": "{{takenRows}}",
+                          "shrinkWrap": true,
+                          "itemSpacing": 10,
+                          "emptyMessage": "Nothing taken yet — the pad is ready",
+                          "itemTemplate": {
+                            "type": "linear",
+                            "direction": "vertical",
+                            "crossAxisAlignment": "stretch",
+                            "spacing": 2,
+                            "children": [
+                              {
+                                "type": "linear",
+                                "direction": "horizontal",
+                                "crossAxisAlignment": "center",
+                                "children": [
+                                  {
+                                    "type": "container",
+                                    "width": 90,
+                                    "alignment": "centerStart",
+                                    "child": {
+                                      "type": "text",
+                                      "content": "{{item.id}}",
+                                      "textAlign": "start",
+                                      "maxLines": 1,
+                                      "style": {
+                                        "fontSize": 14,
+                                        "color": "{{theme.color.onSurfaceVariant}}",
+                                        "textAlign": "start",
+                                        "fontFamily": "JetBrainsMono"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "box",
+                                    "width": 8
+                                  },
+                                  {
+                                    "type": "expanded",
+                                    "child": {
+                                      "type": "text",
+                                      "content": "{{item.item}}",
+                                      "style": {
+                                        "fontSize": 17,
+                                        "color": "{{theme.color.onSurface}}"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "box",
+                                    "width": 8
+                                  },
+                                  {
+                                    "type": "container",
+                                    "width": 80,
+                                    "alignment": "centerEnd",
+                                    "child": {
+                                      "type": "text",
+                                      "content": "{{item.priceLabel}}",
+                                      "textAlign": "end",
+                                      "maxLines": 1,
+                                      "style": {
+                                        "fontSize": 15,
+                                        "color": "{{theme.color.onSurface}}",
+                                        "textAlign": "end",
+                                        "fontFamily": "JetBrainsMono"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "linear",
+                                "direction": "horizontal",
+                                "crossAxisAlignment": "center",
+                                "children": [
+                                  {
+                                    "type": "expanded",
+                                    "child": {
+                                      "type": "wrap",
+                                      "spacing": 10,
+                                      "runSpacing": 2,
+                                      "children": []
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      }
                     },
                     {
-                      "type": "text",
-                      "content": "{{pending}}",
-                      "style": {
-                        "fontSize": 18,
-                        "color": "{{theme.color.primary}}",
-                        "fontFamily": "JetBrainsMono"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "linear",
-                  "direction": "horizontal",
-                  "crossAxisAlignment": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "content": "{{pendingLine}}",
-                      "style": {
-                        "fontSize": 13,
-                        "color": "{{theme.color.onSurfaceVariant}}",
-                        "fontFamily": "JetBrainsMono"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "divider",
-                  "color": "{{theme.color.outline}}"
-                },
-                {
-                  "type": "linear",
-                  "direction": "horizontal",
-                  "crossAxisAlignment": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "content": "Taken on this pad",
-                      "style": {
-                        "fontSize": 13,
-                        "color": "{{theme.color.onSurfaceVariant}}"
+                      "type": "container",
+                      "padding": {
+                        "left": 22,
+                        "right": 22,
+                        "top": 6,
+                        "bottom": 8
+                      },
+                      "child": {
+                        "type": "container",
+                        "padding": {
+                          "all": 18
+                        },
+                        "decoration": {
+                          "color": "{{theme.color.surface}}",
+                          "borderRadius": 14,
+                          "border": {
+                            "color": "{{theme.color.outline}}",
+                            "width": 1
+                          }
+                        },
+                        "child": {
+                          "type": "linear",
+                          "direction": "vertical",
+                          "children": [
+                            {
+                              "type": "linear",
+                              "direction": "vertical",
+                              "crossAxisAlignment": "start",
+                              "spacing": 6,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "content": "WAITING TO REACH THE TILL",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "color": "{{theme.color.onSurfaceVariant}}",
+                                    "letterSpacing": 1.6
+                                  }
+                                },
+                                {
+                                  "type": "text",
+                                  "content": "{{pending}}",
+                                  "style": {
+                                    "fontSize": 18,
+                                    "color": "{{theme.color.primary}}",
+                                    "fontFamily": "JetBrainsMono"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "linear",
+                              "direction": "horizontal",
+                              "crossAxisAlignment": "center",
+                              "children": [
+                                {
+                                  "type": "expanded",
+                                  "child": {
+                                    "type": "text",
+                                    "content": "{{pendingLine}}",
+                                    "style": {
+                                      "fontSize": 13,
+                                      "color": "{{theme.color.onSurfaceVariant}}",
+                                      "fontFamily": "JetBrainsMono"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "divider",
+                              "color": "{{theme.color.outline}}"
+                            },
+                            {
+                              "type": "linear",
+                              "direction": "vertical",
+                              "crossAxisAlignment": "start",
+                              "spacing": 6,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "content": "Taken on this pad",
+                                  "style": {
+                                    "fontSize": 13,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "text",
+                                  "content": "{{takenCount}}",
+                                  "style": {
+                                    "fontSize": 15,
+                                    "color": "{{theme.color.onSurface}}",
+                                    "fontFamily": "JetBrainsMono"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "linear",
+                              "direction": "vertical",
+                              "crossAxisAlignment": "start",
+                              "spacing": 6,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "content": "Rung up",
+                                  "style": {
+                                    "fontSize": 13,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "text",
+                                  "content": "{{total}}",
+                                  "style": {
+                                    "fontSize": 20,
+                                    "color": "{{theme.color.onSurface}}",
+                                    "fontFamily": "JetBrainsMono"
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "gap": 10
+                        }
                       }
                     },
                     {
-                      "type": "spacer"
-                    },
-                    {
-                      "type": "text",
-                      "content": "{{takenCount}}",
-                      "style": {
-                        "fontSize": 15,
-                        "color": "{{theme.color.onSurface}}",
-                        "fontFamily": "JetBrainsMono"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "linear",
-                  "direction": "horizontal",
-                  "crossAxisAlignment": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "content": "Rung up",
-                      "style": {
-                        "fontSize": 13,
-                        "color": "{{theme.color.onSurfaceVariant}}"
-                      }
-                    },
-                    {
-                      "type": "spacer"
-                    },
-                    {
-                      "type": "text",
-                      "content": "{{total}}",
-                      "style": {
-                        "fontSize": 20,
-                        "color": "{{theme.color.onSurface}}",
-                        "fontFamily": "JetBrainsMono"
+                      "type": "container",
+                      "padding": {
+                        "left": 22,
+                        "right": 22,
+                        "top": 4,
+                        "bottom": 18
+                      },
+                      "child": {
+                        "type": "linear",
+                        "direction": "vertical",
+                        "crossAxisAlignment": "start",
+                        "spacing": 6,
+                        "children": [
+                          {
+                            "type": "text",
+                            "content": "{{queueRule}}",
+                            "style": {
+                              "fontSize": 13,
+                              "color": "{{theme.color.onSurfaceVariant}}"
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "content": "{{notice}}",
+                            "style": {
+                              "fontSize": 13,
+                              "color": "{{theme.color.primary}}"
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
-              ],
-              "gap": 10
+              ]
             }
           }
-        },
-        {
-          "type": "container",
-          "padding": {
-            "left": 22,
-            "right": 22,
-            "top": 4,
-            "bottom": 18
-          },
-          "child": {
-            "type": "linear",
-            "direction": "horizontal",
-            "crossAxisAlignment": "center",
-            "children": [
-              {
-                "type": "text",
-                "content": "{{queueRule}}",
-                "style": {
-                  "fontSize": 13,
-                  "color": "{{theme.color.onSurfaceVariant}}"
-                }
-              },
-              {
-                "type": "spacer"
-              },
-              {
-                "type": "text",
-                "content": "{{notice}}",
-                "style": {
-                  "fontSize": 13,
-                  "color": "{{theme.color.primary}}"
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "crossAxisAlignment": "stretch"
+        ]
+      }
     }
   },
   "onInit": {
